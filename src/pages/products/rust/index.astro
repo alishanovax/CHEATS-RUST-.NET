@@ -9,7 +9,7 @@ import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import CatalogCard from '../../../components/CatalogCard.astro';
 import { productPath } from '../../../utils/path';
 
-const seo = resolvePageSeo('/products/apex/');
+const seo = resolvePageSeo('/products/rust/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
@@ -75,13 +75,13 @@ function cardLabel(product: (typeof productPages)[number]) {
       <div class="mt-6 max-w-3xl space-y-3">
         <h1 class="text-3xl font-bold normal-case md:text-4xl">{seo.h1}</h1>
         <p class="text-lg text-muted-foreground">
-          Apex Legends shop: Apex Legends cheats for PC — Elite aimbot &amp; wall ESP, HWID spoofer, UGC recovery and Loadout
+          Rust shop: Rust cheats for PC — Elite aimbot &amp; wall ESP, HWID spoofer, UGC recovery and Loadout
           Changer. Instant delivery after checkout.
         </p>
       </div>
 
-      <section class="mt-10" aria-labelledby="r6-tier-products-heading">
-        <h2 id="r6-tier-products-heading" class="text-xl font-semibold">Lite, Pro and Elite cheat tiers</h2>
+      <section class="mt-10" aria-labelledby="rust-tier-products-heading">
+        <h2 id="rust-tier-products-heading" class="text-xl font-semibold">Lite, Pro and Elite cheat tiers</h2>
         <div class="mt-6 grid min-w-0 items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-3 [&>*]:min-w-0">
           {tierProducts.map((product) => (
             <CatalogCard

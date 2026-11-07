@@ -10,7 +10,7 @@ export const DEFAULT_OG_IMAGE = PRIMARY_CHEAT_IMAGE;
 
 export const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID as string | undefined;
 
-/** @example @apexlegendcheats */
+/** @example @cheatsrust */
 export const TWITTER_SITE = import.meta.env.PUBLIC_TWITTER_SITE as string | undefined;
 
 export const TWITTER_CREATOR = import.meta.env.PUBLIC_TWITTER_CREATOR as string | undefined;
@@ -60,11 +60,11 @@ export function pageTitle(keyword: string, brand = t.site.name): string {
   return `${trimmed}${suffix}`;
 }
 
-/** Keep meta descriptions blunt about Apex Legends cheats for SERP snippets. */
+/** Keep meta descriptions blunt about Rust cheats for SERP snippets. */
 export function cheatMetaDescription(text: string): string {
   const trimmed = text.trim();
-  if (/mw4\s*cheat/i.test(trimmed)) return trimmed;
-  return `Apex Legends cheats guide: ${trimmed}`;
+  if (/rust\s*cheat/i.test(trimmed)) return trimmed;
+  return `Rust cheats guide: ${trimmed}`;
 }
 
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;

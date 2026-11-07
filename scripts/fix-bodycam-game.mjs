@@ -1,4 +1,4 @@
-/** Apex Legends (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
+/** Rust (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,8 +13,8 @@ const REPLACEMENTS = [
   ['through Steam Games', 'through Steam'],
   ['on Steam Games', 'on Steam'],
   ['Steam Games', 'Steam'],
-  ['launch Apex Legends on Epic', 'launch Apex Legends on Steam'],
-  ['Private Servers', 'Firing Range'],
+  ['launch Rust on Epic', 'launch Rust on Steam'],
+  ['Private Servers', 'combat test server'],
   ['private servers', 'shooting range'],
   ['Auto Shield Break', 'Recoil control'],
   ['Auto Finish', 'Triggerbot'],
@@ -28,13 +28,13 @@ const REPLACEMENTS = [
   ['Chest and floor-ammo ESP', 'Weapon and ammo pickup ESP'],
   ['high-ground angles and chest positions', 'angles and bomb-site lines'],
   ['same POI clear', 'same map route'],
-  ['Private Servers island', 'Firing Range session'],
-  ['Private Servers islands', 'Firing Range sessions'],
+  ['Private Servers island', 'combat test server session'],
+  ['Private Servers islands', 'combat test server sessions'],
   ['BR, Ranked, Ranked, Private Servers', 'Wingman, Body Bomb, TDM, Hardpoint'],
-  ['Multiplayer, Ranked, Ranked, Private Servers', 'Battle Royale, Ranked, Wingman, Hardpoint'],
-  ['Multiplayer, Ranked and Ranked', 'Battle Royale, Wingman and ranked seasons'],
-  ['Multiplayer and Ranked', 'Battle Royale and Ranked'],
-  ['Ranked and Private Servers', 'Ranked seasons and Firing Range'],
+  ['Multiplayer, Ranked, Ranked, Private Servers', 'vanilla servers, Ranked, Wingman, Hardpoint'],
+  ['Multiplayer, Ranked and Ranked', 'vanilla servers, Wingman and ranked seasons'],
+  ['Multiplayer and Ranked', 'vanilla and modded servers'],
+  ['Ranked and Private Servers', 'Ranked seasons and combat test server'],
   ['Ranked or Ranked', 'Wingman or Ranked'],
   ['Ranked presets', 'ranked-season presets'],
   ['before Ranked', 'before ranked matchmaking'],

@@ -1,15 +1,15 @@
 /**
- * SSR copy for /go/apex/ — mirror for Zadeyo /products/apex-legends SEO.
+ * SSR copy for /go/rust/ — mirror for Zadeyo /products/rust-legends SEO.
  * Apply the same fields in Zadeyo admin (this repo does not deploy zadeyo.com).
  */
-export const ZADEYO_APEX_CHECKOUT_URL =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fapex-legends';
+export const ZADEYO_RUST_CHECKOUT_URL =
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frust';
 
-export const ZADEYO_APEX_PRODUCT_SEO = {
-  title: 'Apex Legends Cheats – Monthly and long-term PC access',
+export const ZADEYO_RUST_PRODUCT_SEO = {
+  title: 'Rust Cheats – Monthly and long-term PC access',
   description:
-    'Apex Legends PC cheats with player ESP, aimbot, radar, and recoil control. Compare tiers on apexlegendcheats.net, then checkout on ZADEYO when status is online.',
-  h1: 'Apex Legends Cheats — ESP, aimbot, wall ESP & ranked presets',
+    'Rust PC cheats with player ESP, aimbot, radar, and recoil control. Compare tiers on cheatsrust.net, then checkout on ZADEYO when status is online.',
+  h1: 'Rust Cheats — ESP, aimbot, wall ESP & ranked presets',
   h2ProductDetails: 'Product details',
   h2Features: 'Features',
   h2SystemRequirements: 'System requirements',
@@ -17,9 +17,9 @@ export const ZADEYO_APEX_PRODUCT_SEO = {
   h2Plans: 'Monthly vs long-term plans',
   h2Loader: 'Loader, configs, and updates',
   h2Safety: 'Status checks before you queue',
-  logoAlt: 'Apex Legends cheats — ZADEYO checkout logo',
+  logoAlt: 'Rust cheats — ZADEYO checkout logo',
   intro:
-    'PC tools with player ESP, precision aimbot, and recoil control. Compare tiers on apexlegendcheats.net, then continue to ZADEYO when the status banner shows online.',
+    'PC tools with player ESP, precision aimbot, and recoil control. Compare tiers on cheatsrust.net, then continue to ZADEYO when the status banner shows online.',
   sections: [
     {
       heading: 'Aim and combat modules',
@@ -32,7 +32,7 @@ export const ZADEYO_APEX_PRODUCT_SEO = {
       heading: 'ESP and loot awareness',
       level: 'h3' as const,
       paragraphs: [
-        'Player ESP, skeleton and box overlays, snaplines, loot ESP, and save/load config profiles for Battle Royale and Ranked.',
+        'Player ESP, skeleton and box overlays, snaplines, loot ESP, and save/load config profiles for vanilla and modded servers.',
       ],
     },
   ],
@@ -42,7 +42,7 @@ export const ZADEYO_APEX_PRODUCT_SEO = {
       headingKey: 'h2Checkout' as const,
       paragraphs: [
         'Payment and license delivery run on ZADEYO after you choose a plan. You receive digital loader access and setup guidance—no physical shipment.',
-        'Use apexlegendcheats.net for tier tables, Easy Anti-Cheat patch notes, and pre-purchase FAQ before you launch Apex Legends on PC.',
+        'Use cheatsrust.net for tier tables, Easy Anti-Cheat patch notes, and pre-purchase FAQ before you launch Rust on PC.',
       ],
     },
     {
@@ -57,8 +57,8 @@ export const ZADEYO_APEX_PRODUCT_SEO = {
       id: 'loader',
       headingKey: 'h2Loader' as const,
       paragraphs: [
-        'The customer portal hosts the current Windows loader, default configs, and save/load profiles for Battle Royale and Ranked.',
-        'After an Apex Legends or Easy Anti-Cheat update, reload the loader from the portal and read the homepage status banner before ranked queue.',
+        'The customer portal hosts the current Windows loader, default configs, and save/load profiles for vanilla and modded servers.',
+        'After an Rust or Easy Anti-Cheat update, reload the loader from the portal and read the homepage status banner before ranked queue.',
       ],
     },
     {
@@ -66,13 +66,13 @@ export const ZADEYO_APEX_PRODUCT_SEO = {
       headingKey: 'h2Safety' as const,
       paragraphs: [
         'Third-party tools carry ban risk. Start with conservative FOV, smooth aim, and limited ESP distance until sessions feel stable.',
-        'Check Discord #status and the apexlegendcheats.net banner on patch days. Do not queue ranked while modules show offline or misaligned.',
+        'Check Discord #status and the cheatsrust.net banner on patch days. Do not queue ranked while modules show offline or misaligned.',
       ],
     },
   ],
   screenshotAlts: [
-    'Apex Legends ESP overlay screenshot 1',
-    'Apex Legends aimbot FOV screenshot 2',
-    'Apex Legends loot ESP screenshot 3',
+    'Rust ESP overlay screenshot 1',
+    'Rust aimbot FOV screenshot 2',
+    'Rust loot ESP screenshot 3',
   ],
 } as const;

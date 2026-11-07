@@ -22,7 +22,7 @@ const sourceTimestamp = (path?: string) => {
 ---
 
 <BaseLayout title={seo.title} description={seo.description} jsonLd={[
-  collectionPageSchema({ name: 'Apex Legends Cheats Community Forum', description: seo.description, url: '/forum/' }),
+  collectionPageSchema({ name: 'Rust Cheats Community Forum', description: seo.description, url: '/forum/' }),
   breadcrumbSchema(breadcrumbs),
 ]}>
   <style slot="head" is:inline>
@@ -53,7 +53,7 @@ const sourceTimestamp = (path?: string) => {
           <p class="forum-hero__lede">Forum discussions by topic</p>
           <p class="forum-hero__copy">Practical answers on loader setup, aimbot configs, patch updates, and weapon loadouts.</p>
         </div>
-        <a class="forum-create" href="/blog/"><Icon name="messageCircle" size={17} /> Apex Legends cheat guides from the blog</a>
+        <a class="forum-create" href="/blog/"><Icon name="messageCircle" size={17} /> Rust cheat guides from the blog</a>
       </header>
 
       <div class="forum-layout">
@@ -90,7 +90,7 @@ const sourceTimestamp = (path?: string) => {
                   <div class="forum-post-meta">
                     <span class={`forum-community-avatar tone-${post.categoryTone}`}><Icon name="users" size={15} /></span>
                     <span class="forum-community-name">d/{post.category.toLowerCase().replaceAll(/[^a-z0-9]/g, '')}</span>
-                    <span>·</span><span><Icon name="userRound" size={13} /> Apex Legends Cheats guide team</span><span>Guide-based Q&amp;A</span>
+                    <span>·</span><span><Icon name="userRound" size={13} /> Rust Cheats guide team</span><span>Guide-based Q&amp;A</span>
                   </div>
                   <a class="forum-post-title" href={`/forum/${post.slug}/`}>{post.title}</a>
                   <p class="forum-post-excerpt">{post.excerpt}</p>
@@ -135,11 +135,11 @@ const sourceTimestamp = (path?: string) => {
                 <span class="forum-community-avatar forum-community-avatar--brand" aria-hidden="true">
                   <img src="/logo.svg" alt={forumLogoAlt} width="34" height="34" />
                 </span>
-                <p id="forum-about-heading" class="forum-about__community-name">Apex Legends Cheats Community</p>
+                <p id="forum-about-heading" class="forum-about__community-name">Rust Cheats Community</p>
               </div>
-              <p>A home for Apex Legends players to trade ideas, learn together, and celebrate the game.</p>
+              <p>A home for Rust players to trade ideas, learn together, and celebrate the game.</p>
               <div class="forum-stats"><span><b>{forumPosts.length}</b> guide discussions</span><span><b>{forumCategories.length}</b> topics</span></div>
-              <a class="forum-join" href="/blog/">Browse every Apex setup guide</a>
+              <a class="forum-join" href="/blog/">Browse every Rust setup guide</a>
             </div>
           </section>
           <section class="forum-side-card" id="communities">
@@ -159,7 +159,7 @@ const sourceTimestamp = (path?: string) => {
             <a href="#community-guidelines">Forum community guidelines (full) <Icon name="arrowRight" size={14} /></a>
           </section>
           <p class="forum-sidebar-foot">
-            <a href="/about/">About apexlegendcheats.net</a>
+            <a href="/about/">About cheatsrust.net</a>
             <span aria-hidden="true"> · </span>
             <a href="#community-guidelines">Guidelines</a>
             <span aria-hidden="true"> · </span>
@@ -167,7 +167,7 @@ const sourceTimestamp = (path?: string) => {
             <span aria-hidden="true"> · </span>
             <a href="/terms/">Terms</a>
             <br />
-            © {new Date().getFullYear()} Apex Legends Cheats Community
+            © {new Date().getFullYear()} Rust Cheats Community
           </p>
         </aside>
       </div>

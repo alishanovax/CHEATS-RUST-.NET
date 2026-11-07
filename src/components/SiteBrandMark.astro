@@ -4,20 +4,20 @@ import { footerLogoAltForPath } from '../config/seoLogoAlt';
 
 interface Props {
   showIcon?: boolean;
-  /** Header: pill lockup. Footer: icon-only (letter A mark). */
+  /** Header: R icon only. Footer: icon-only R mark. */
   compact?: boolean;
   class?: string;
 }
 
 const { showIcon = false, compact = false, class: className } = Astro.props;
-const brandTagline = 'Apex Legends PC — Aimbot, ESP & radar tools';
-const footerIconOnly = showIcon && !compact;
+const brandTagline = 'Rust PC — Aimbot, ESP & radar tools';
+const iconOnly = showIcon;
 ---
 
 <a
   href="/"
   class:list={['site-brand', compact && 'site-brand--compact', className]}
-  aria-label={showIcon ? 'Return to apexlegendcheats.net homepage' : t.ui.homeAria}
+  aria-label={showIcon ? 'Return to cheatsrust.net homepage' : t.ui.homeAria}
 >
   {
     showIcon && (
@@ -31,14 +31,14 @@ const footerIconOnly = showIcon && !compact;
     )
   }
   {
-    compact ? (
+    iconOnly ? null : compact ? (
       <span class="site-brand__pill" aria-hidden="true">
-        Apex <span class="site-brand__pill-accent">Cheats</span>
+        Rust <span class="site-brand__pill-accent">Cheats</span>
       </span>
-    ) : footerIconOnly ? null : (
+    ) : (
       <span class="site-brand__stack min-w-0" aria-hidden="true">
         <span class="site-brand__title">
-          Apex <span class="site-brand__title-accent">Cheats</span>
+          Rust <span class="site-brand__title-accent">Cheats</span>
         </span>
         <span class="site-brand__tagline">{brandTagline}</span>
       </span>

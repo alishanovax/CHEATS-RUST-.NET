@@ -25,12 +25,12 @@ const ogImageUrl = absoluteAssetUrl(ogImage ?? DEFAULT_OG_IMAGE);
 const shareImageAlt = ogImageAlt ?? title;
 
 const navLinks = [
-  { href: '/', label: 'apexlegendcheats.net home' },
-  { href: '/products/apex/', label: 'Browse Apex product catalog' },
-  { href: '/blog/', label: 'Read Apex setup guides' },
+  { href: '/', label: 'cheatsrust.net home' },
+  { href: '/products/rust/', label: 'Browse Rust product catalog' },
+  { href: '/blog/', label: 'Read Rust setup guides' },
   { href: '/faq/', label: 'Pre-purchase FAQ' },
   { href: '/support/', label: 'Checkout support desk' },
-  { href: '/forum/', label: 'Apex community forum' },
+  { href: '/forum/', label: 'Rust community forum' },
 ];
 ---
 
@@ -68,8 +68,8 @@ const navLinks = [
     <header class="border-b border-border bg-muted/20">
       <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-5 py-4">
         <a href="/" class="inline-flex items-center gap-2 font-bold">
-          <img src="/logo.svg" width="32" height="32" alt={logoAlt ?? 'Apex Legends Cheats logo'} />
-          <span class="text-sm">Apex Legends Cheats checkout</span>
+          <img src="/logo.svg" width="32" height="32" alt={logoAlt ?? 'Rust Cheats logo'} />
+          <span class="text-sm">Rust Cheats checkout</span>
         </a>
         <nav class="flex flex-wrap gap-x-4 gap-y-1 text-sm" aria-label="Checkout bridge">
           {navLinks.map((link) => (

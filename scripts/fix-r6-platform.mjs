@@ -3,8 +3,8 @@ import path from 'node:path';
 
 const root = path.join(process.cwd(), 'src');
 const REPLACEMENTS = [
-  ['Apex Legends and EAC receive', 'Apex Legends and Easy Anti-Cheat receive'],
-  ['Easy Anti-Hack or Apex Legends', 'Easy Anti-Cheat or Apex Legends'],
+  ['Rust and EAC receive', 'Rust and Easy Anti-Cheat receive'],
+  ['Easy Anti-Hack or Rust', 'Easy Anti-Cheat or Rust'],
   ['Easy Anti-Hack', 'Easy Anti-Cheat'],
   ['Easy Anti-Hack', 'Easy Anti-Cheat'],
   ['EAC patch-day', 'Easy Anti-Cheat patch-day'],
@@ -19,9 +19,9 @@ const REPLACEMENTS = [
   ['EAC Unable to verify', 'Easy Anti-Cheat connection issues on'],
   ['EAC cannot verify', 'Easy Anti-Cheat cannot verify'],
   ['if EAC cannot', 'if Easy Anti-Cheat cannot'],
-  ['from the loader or Steam', 'from the loader or EA Connect'],
-  ['launch Apex Legends on Steam', 'launch Apex Legends through EA Connect'],
-  ['Apex Legends on Steam', 'Apex Legends on PC'],
+  ['from the loader or Steam', 'from the loader or Steam'],
+  ['launch Rust on Steam', 'launch Rust through Steam'],
+  ['Rust on Steam', 'Rust on PC'],
   ['for Steam players', 'for PC players'],
   ['on Steam PC', 'on PC'],
   ['Steam PC', 'PC'],
@@ -32,12 +32,12 @@ const REPLACEMENTS = [
   ['Steam review', 'EA review'],
   ['Steam restrictions', 'EA account restrictions'],
   ['Steam ban appeals', 'EA ban appeals'],
-  ['Steam game file verification', 'EA Connect file verification'],
-  ['through Steam', 'through EA Connect'],
-  ['normal Steam launch', 'normal EA Connect launch'],
+  ['Steam game file verification', 'Steam file verification'],
+  ['through Steam', 'through Steam'],
+  ['normal Steam launch', 'normal Steam launch'],
   ['into the Steam folder', 'into the game folder'],
   ['Loot-shooter action on Steam', 'Tactical shooter action on PC'],
-  ['Mw4 Hacks', 'Apex Legends Cheats'],
+  ['Mw4 Hacks', 'Rust Cheats'],
 ];
 
 function walk(dir, out = []) {

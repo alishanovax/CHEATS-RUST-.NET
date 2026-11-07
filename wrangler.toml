@@ -1,5 +1,5 @@
 # Static Astro site — do not auto-add @astrojs/cloudflare (keeps output in dist/).
-name = "apexlegendcheats-net"
+name = "cheatsrust-net"
 main = "worker/canonical-host.mjs"
 compatibility_date = "2025-10-11"
 

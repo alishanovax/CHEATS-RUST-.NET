@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://apexlegendcheats.net/sitemap-pages.xml</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/sitemap-pages.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://apexlegendcheats.net/sitemap-products.xml</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/sitemap-products.xml</loc>
   </sitemap>
   <sitemap>
-    <loc>https://apexlegendcheats.net/sitemap-blog.xml</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/sitemap-blog.xml</loc>
+    <lastmod>2026-10-23</lastmod>
   </sitemap>
   <sitemap>
-    <loc>https://apexlegendcheats.net/sitemap-forum.xml</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/sitemap-forum.xml</loc>
   </sitemap>
 </sitemapindex>

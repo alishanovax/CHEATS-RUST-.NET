@@ -1,4 +1,4 @@
-const storagePrefix = 'apexlegendcheats-forum-vote:';
+const storagePrefix = 'cheatsrust-forum-vote:';
 
 export function initForumVotes(): void {
   document.querySelectorAll<HTMLElement>('[data-forum-card], [data-forum-vote]').forEach((post) => {

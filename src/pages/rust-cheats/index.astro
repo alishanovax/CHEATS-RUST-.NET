@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { resolvePageSeo } from '../../config/seo';
 import { PRIMARY_CHEAT_IMAGE } from '../../config/siteImages';
 import { checkoutPath } from '../../config/checkout';
-import { apexLegendsCheatsLanding } from '../../data/apexLegendsCheatsLanding';
+import { rustCheatsLanding } from '../../data/rustCheatsLanding';
 import ResponsiveImage from '../../components/ResponsiveImage.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
@@ -11,13 +11,13 @@ import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import { ROUTES } from '../../utils/path';
 
-const seo = resolvePageSeo('/apex-legends-cheats/');
+const seo = resolvePageSeo('/rust-cheats/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
-  { name: 'PC', path: '/apex-legends-cheats/' },
+  { name: 'PC', path: '/rust-cheats/' },
 ];
-const checkout = checkoutPath('apex');
-const copy = apexLegendsCheatsLanding;
+const checkout = checkoutPath('rust');
+const copy = rustCheatsLanding;
 
 function linkify(text: string): string {
   return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => {
@@ -34,7 +34,7 @@ function linkify(text: string): string {
     webPageSchema({
       name: copy.h1,
       description: seo.description,
-      url: '/apex-legends-cheats/',
+      url: '/rust-cheats/',
     }),
     breadcrumbSchema(breadcrumbs),
   ]}

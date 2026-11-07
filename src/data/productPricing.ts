@@ -9,7 +9,7 @@ export interface ProductPlan {
   popular?: boolean;
 }
 
-/** Matches Zadeyo Apex Legends offers (Monthly $35 / 31 days, Lifetime $150). */
+/** Matches Zadeyo Rust offers (Monthly $35 / 31 days, Lifetime $150). */
 const standardPlans: ProductPlan[] = [
   {
     id: 'monthly',

@@ -24,11 +24,11 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
 export function websiteSchema(input?: { description?: string }) {
   const description =
     input?.description?.trim() ||
-    'Apex Legends cheats for PC — aimbot, player ESP, guides and tier comparisons on apexlegendcheats.net.';
+    'Rust cheats for PC — aimbot, player ESP, guides and tier comparisons on cheatsrust.net.';
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Apex Legends Cheats',
+    name: 'Rust Cheats',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description,
@@ -41,7 +41,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Apex Legends Cheats',
+    name: 'Rust Cheats',
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/logo.svg`,
     email: SUPPORT_EMAIL,
@@ -69,7 +69,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Apex Legends Cheats',
+      name: 'Rust Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -85,7 +85,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Apex Legends Cheats',
+      name: 'Rust Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -134,7 +134,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Apex Legends Cheats Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'Rust Cheats Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -159,7 +159,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'Apex Legends Cheats',
+      name: 'Rust Cheats',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     offers: {
@@ -172,7 +172,7 @@ export function productSchema(input: {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Apex Legends Cheats',
+        name: 'Rust Cheats',
       },
       offers: getProductPlans().map((plan) => ({
         '@type': 'Offer',
@@ -223,11 +223,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Apex Legends Cheats',
+      name: 'Rust Cheats',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Apex Legends Cheats',
+      name: 'Rust Cheats',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_ORIGIN}/logo.svg`,

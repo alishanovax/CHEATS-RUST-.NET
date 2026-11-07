@@ -42,8 +42,8 @@ function applyCopy(text) {
   let next = text;
 
   // Paths, slugs, identifiers (keep literal)
-  next = protect(next, /\/products\/apex-legends-cheats\b/g, 'path');
-  next = protect(next, /apex-legends-cheats(?=[-/'"`])/g, 'slug');
+  next = protect(next, /\/products\/rust-cheats\b/g, 'path');
+  next = protect(next, /rust-cheats(?=[-/'"`])/g, 'slug');
   next = protect(next, /cheatImageForSlug/g, 'fn');
   next = protect(next, /r6CheatsLanding/g, 'id');
   next = protect(next, /\bbrowseCheats\b/g, 'key');
@@ -65,7 +65,7 @@ function applyCopy(text) {
   next = next.replace(/\bcheat\b/g, 'hack');
 
   // User asked for "hacks" not singular "hack" on branding
-  next = next.replace(/\bApex Legends Cheats\b/g, 'Apex Legends Cheats');
+  next = next.replace(/\bRust Cheats\b/g, 'Rust Cheats');
   next = next.replace(/\bBuy hack\b/gi, 'Buy hacks');
   next = next.replace(/\bBuy Hack\b/g, 'Buy Hacks');
 

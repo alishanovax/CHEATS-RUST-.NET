@@ -1,5 +1,5 @@
 /**
- * Install the four approved Apex Legends hack screenshots into public/images/.
+ * Install the four approved Rust hack screenshots into public/images/.
  * Run: node scripts/install-r6-hack-images.mjs
  */
 import fs from 'node:fs';

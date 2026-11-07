@@ -1741,7 +1741,7 @@
             try {window.Plotly.relayout(gd, {width: Math.round(rect.width), height: Math.round(rect.height)});} catch (e) { }
           });
         }
-        if (window.ApexCharts && window.Apex && window.Apex._chartInstances) {
+        if (window.ApexCharts && window.Rust && window.Apex._chartInstances) {
           window.Apex._chartInstances.forEach(function (inst) {
             try {(inst.chart || inst).updateOptions({}, false, false);} catch (e) { }
           });

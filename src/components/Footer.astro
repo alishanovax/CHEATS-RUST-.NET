@@ -5,8 +5,8 @@ import SiteBrandMark from './SiteBrandMark.astro';
 
 const resourceLinks = [
   { href: '/blog/', label: 'Blog archive', ariaLabel: 'Blog' },
-  { href: '/products/apex/elite/', label: 'Elite cheats', ariaLabel: 'Elite cheats' },
-  { href: '/products/apex/', label: 'Products & utilities', ariaLabel: 'Products' },
+  { href: '/products/rust/elite/', label: 'Elite cheats', ariaLabel: 'Elite cheats' },
+  { href: '/products/rust/', label: 'Products & utilities', ariaLabel: 'Products' },
   { href: '/support/', label: t.footer.support },
 ];
 
@@ -22,11 +22,11 @@ const onHomePage = normalizedPath === '/';
 const onAboutPage = normalizedPath === '/about';
 const onBlogPage = normalizedPath === '/blog';
 const onFaqPage = normalizedPath === '/faq';
-const onPracticeLobbyPost = normalizedPath === '/blog/apex-firing-range-practice';
-const onStreamProofPost = normalizedPath === '/blog/apex-stream-proof';
-const onRadarPost = normalizedPath === '/blog/apex-radar';
+const onPracticeLobbyPost = normalizedPath === '/blog/rust-firing-range-practice';
+const onStreamProofPost = normalizedPath === '/blog/rust-stream-proof';
+const onRadarPost = normalizedPath === '/blog/rust-radar';
 const onForumPage = normalizedPath === '/forum';
-const onProductsApexHub = normalizedPath === '/products/apex';
+const onProductsApexHub = normalizedPath === '/products/rust';
 
 ---
 
@@ -63,15 +63,15 @@ const onProductsApexHub = normalizedPath === '/products/apex';
             <li>
               <a href={link.href} class="text-sm text-muted-foreground hover:text-primary" aria-label={link.ariaLabel}>
                 {onProductsApexHub && link.href === '/blog/'
-                  ? 'Apex catalog hub — patch setup guides'
+                  ? 'Rust catalog hub — patch setup guides'
                   : onProductsApexHub && link.href === '/support/'
-                    ? 'Apex catalog — loader and checkout support'
-                    : onProductsApexHub && link.href === '/products/apex/elite/'
+                    ? 'Rust catalog — loader and checkout support'
+                    : onProductsApexHub && link.href === '/products/rust/elite/'
                       ? 'Elite tier listing from catalog hub'
-                      : onProductsApexHub && link.href === '/products/apex/'
-                        ? 'Apex product catalog (you are here)'
+                      : onProductsApexHub && link.href === '/products/rust/'
+                        ? 'Rust product catalog (you are here)'
                         : onForumPage && link.href === '/blog/'
-                  ? 'Forum sidebar — Apex setup guides'
+                  ? 'Forum sidebar — Rust setup guides'
                   : onPrivacyPage && link.href === '/support/'
                   ? 'Privacy questions — shop support'
                   : onHomePage && link.href === '/support/'
@@ -90,10 +90,10 @@ const onProductsApexHub = normalizedPath === '/products/apex';
                               ? 'Radar cheat guide — loader support'
                               : onRadarPost && link.href === '/blog/'
                                 ? 'Radar article hub — more setup guides'
-                                : onRadarPost && link.href === '/products/apex/elite/'
+                                : onRadarPost && link.href === '/products/rust/elite/'
                                   ? 'Elite tier from radar guide sidebar'
-                                  : onRadarPost && link.href === '/products/apex/'
-                                    ? 'Apex cheats shop linked from radar guide'
+                                  : onRadarPost && link.href === '/products/rust/'
+                                    ? 'Rust cheats shop linked from radar guide'
                                     : onForumPage && link.href === '/support/'
                                       ? 'Forum page — loader and checkout support'
                                       : link.label}
@@ -109,7 +109,7 @@ const onProductsApexHub = normalizedPath === '/products/apex';
           {legalLinks.map((link) => (
             <li>
               <a href={link.href} class="text-sm text-muted-foreground hover:text-primary">
-                {onForumPage && link.href === '/about/' ? 'Footer — about apexlegendcheats.net' : link.label}
+                {onForumPage && link.href === '/about/' ? 'Footer — about cheatsrust.net' : link.label}
               </a>
             </li>
           ))}

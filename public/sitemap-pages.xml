@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://apexlegendcheats.net/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://apexlegendcheats.net/about/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/about/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://apexlegendcheats.net/apex-legends-cheats/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/faq/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cheatsrust.net/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://cheatsrust.net/rust-cheats/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://apexlegendcheats.net/faq/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/support/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://apexlegendcheats.net/privacy/</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://apexlegendcheats.net/support/</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://apexlegendcheats.net/terms/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <loc>https://cheatsrust.net/terms/</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

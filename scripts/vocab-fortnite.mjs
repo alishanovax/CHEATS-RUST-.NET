@@ -1,5 +1,5 @@
 /**
- * Second-pass vocabulary cleanup: Dota/Steam/VAC leftovers → Apex Legends.
+ * Second-pass vocabulary cleanup: Dota/Steam/VAC leftovers → Rust.
  * Run: node scripts/vocab-mw4.mjs
  */
 import fs from 'node:fs';
@@ -32,11 +32,11 @@ const REPLACEMENTS = [
   ['Steam platform', 'Steam Games platform'],
   ['Steam overlay', 'Steam overlay'],
   ['Steam restrictions', 'Steam account restrictions'],
-  ['Steam Apex Legends', 'Apex Legends on Epic'],
+  ['Steam Rust', 'Rust on Epic'],
   ['through Steam', 'through Steam Games'],
   ['exiting Steam', 'exiting the Steam Games Launcher'],
-  ['Current Apex Legends client via Steam', 'Current Apex Legends client via Steam Games Launcher'],
-  ['right-click Apex Legends → Properties', 'open Apex Legends settings in the Steam Games Launcher'],
+  ['Current Rust client via Steam', 'Current Rust client via Steam Games Launcher'],
+  ['right-click Rust → Properties', 'open Rust settings in the Steam Games Launcher'],
   ['reqSteam', 'reqEpic'],
   ['compatSteam', 'compatEpic'],
   [' Steam ', ' Steam Games '],
@@ -200,7 +200,7 @@ const REPLACEMENTS = [
   ['Fog of war', 'Storm circle'],
   ['fog of war', 'storm circle'],
 
-  ['Apex Legends Scripts, Map Hack & ESP', 'Apex Legends Aimbot, ESP & Wallhack'],
+  ['Rust Scripts, Map Hack & ESP', 'Rust Aimbot, ESP & Wallhack'],
   ['humanized scripts', 'humanized aimbot'],
   ['script automation', 'aimbot automation'],
   ['script delays', 'aimbot smoothness'],

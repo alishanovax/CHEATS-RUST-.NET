@@ -38,8 +38,8 @@ const REPLACEMENTS = [
   ['https://zadeyo.com/products/fortnite', 'https://zadeyo.com/products/bodycam'],
   ['%2Fproducts%2Ffortnite', '%2Fproducts%2Frainbow-six-siege-hacks'],
   ['/products/fortnite', '/products/bodycam'],
-  ['/go/apex/', '/go/apex/'],
-  ['/go/apex', '/go/apex'],
+  ['/go/rust/', '/go/rust/'],
+  ['/go/rust', '/go/rust'],
 
   ["checkoutPath('fortnite')", "checkoutPath('bodycam')"],
   ['checkoutPath("fortnite")', 'checkoutPath("bodycam")'],
@@ -90,7 +90,7 @@ const REPLACEMENTS = [
   ['Epic store', 'Steam inventory'],
   ['Epic ', 'Steam '],
 
-  ['Battle Royale', 'Multiplayer'],
+  ['vanilla servers', 'Multiplayer'],
   ['Zero Build', 'Ranked'],
   ['Ranked Arena', 'Ranked'],
   ['Creative', 'Private Servers'],

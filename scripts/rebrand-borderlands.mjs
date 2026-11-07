@@ -26,12 +26,12 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.seo-baseline', '_template']);
 
 const PURCHASE_URL =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fapex-legends-cheats';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frust-cheats';
 
 /** Ordered longest-first replacements. */
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fapex-legends-cheats', PURCHASE_URL],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fapex-legends-cheats', PURCHASE_URL],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frust-cheats', PURCHASE_URL],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frust-cheats', PURCHASE_URL],
   ['%2Fproducts%2Frainbow-six-siege-hacks', '%2Fproducts%2Frainbow-six-siege-hacks'],
   ['/products/bodycam-hacks', '/products/borderlands-hacks'],
   ['products/bodycam-hacks', 'products/borderlands-hacks'],
@@ -44,8 +44,8 @@ const REPLACEMENTS = [
   ['Bodycamhack', 'Borderlandscheats'],
   ['bodycamhack', 'borderlandscheats'],
 
-  ['/go/apex/', '/go/apex/'],
-  ['/go/apex', '/go/apex'],
+  ['/go/rust/', '/go/rust/'],
+  ['/go/rust', '/go/rust'],
   ["checkoutPath('bodycam')", "checkoutPath('borderlands')"],
   ['checkoutPath("bodycam")', 'checkoutPath("borderlands")'],
   ["product: 'bodycam'", "product: 'borderlands'"],

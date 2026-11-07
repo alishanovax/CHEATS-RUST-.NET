@@ -3,10 +3,10 @@ Allow: /
 
 Disallow: /go/
 
-Sitemap: https://apexlegendcheats.net/sitemap.xml
-Sitemap: https://apexlegendcheats.net/sitemap-pages.xml
-Sitemap: https://apexlegendcheats.net/sitemap-products.xml
-Sitemap: https://apexlegendcheats.net/sitemap-blog.xml
-Sitemap: https://apexlegendcheats.net/sitemap-forum.xml
+Sitemap: https://cheatsrust.net/sitemap.xml
+Sitemap: https://cheatsrust.net/sitemap-pages.xml
+Sitemap: https://cheatsrust.net/sitemap-products.xml
+Sitemap: https://cheatsrust.net/sitemap-blog.xml
+Sitemap: https://cheatsrust.net/sitemap-forum.xml
 
-# RSS: https://apexlegendcheats.net/rss.xml
+# RSS: https://cheatsrust.net/rss.xml

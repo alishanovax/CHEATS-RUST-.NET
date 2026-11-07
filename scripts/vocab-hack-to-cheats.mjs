@@ -1,6 +1,6 @@
 /**
  * Replace user-facing "hack/hacks/wallhack" with cheat/cheats/wall ESP.
- * Skips slug/path segments that contain hyphens (e.g. apex-esp-setup).
+ * Skips slug/path segments that contain hyphens (e.g. rust-esp-setup).
  */
 import fs from 'node:fs';
 import path from 'node:path';

@@ -1,5 +1,5 @@
 /**
- * Replace Dota-era gameplay/blog PNGs with Apex Legends screenshots.
+ * Replace Dota-era gameplay/blog PNGs with Rust screenshots.
  * Run after npm ci: node scripts/fetch-r6-gameplay.mjs
  */
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -17,8 +17,8 @@ const publicDir = path.resolve('public');
 const GAMEPLAY = [
   { file: 'r6-esp-wallhack.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
   { file: 'r6-player-esp.png', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
-  { file: 'apex-aimbot-combat.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
-  { file: 'apex-radar-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
+  { file: 'rust-aimbot-combat.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
+  { file: 'rust-radar-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
   { file: 'r6-skin-changer.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
   { file: 'r6-auto-aim.png', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
   { file: 'r6-loot-radar.png', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
@@ -34,24 +34,24 @@ const BLOG_POOL = [
 ];
 
 const BLOG_BASES = [
-  'apex-firing-range-practice',
-  'apex-training-tips',
-  'apex-cheat-setup',
-  'apex-cheat-features',
-  'apex-practice-settings',
-  'apex-lite-vs-pro',
-  'apex-elite-tier',
-  'apex-aimbot-ranked',
-  'apex-esp-setup',
-  'apex-radar-hack-guide',
-  'apex-loadouts',
+  'rust-firing-range-practice',
+  'rust-training-tips',
+  'rust-cheat-setup',
+  'rust-cheat-features',
+  'rust-practice-settings',
+  'rust-lite-vs-pro',
+  'rust-elite-tier',
+  'rust-aimbot-ranked',
+  'rust-esp-setup',
+  'rust-radar-hack-guide',
+  'rust-loadouts',
   'eac-patch-day-checklist',
-  'apex-hwid-ban',
-  'buy-apex-legends-cheats',
-  'apex-aimbot-combat',
+  'rust-hwid-ban',
+  'buy-rust-legends-cheats',
+  'rust-aimbot-combat',
   'eac-bypass-r6-guide',
-  'apex-external-loader',
-  'apex-stream-proof',
+  'rust-external-loader',
+  'rust-stream-proof',
 ];
 
 async function fetchPng(url) {
@@ -103,7 +103,7 @@ if (hero) {
     await writeFile(path.join(publicDir, name), await sharp(logo).resize(size, size).png().toBuffer());
   }
   await writeFile(path.join(publicDir, 'favicon.ico'), await sharp(logo).resize(32, 32).png().toBuffer());
-  console.log('updated favicons from Apex Legends art');
+  console.log('updated favicons from Rust art');
 }
 
-console.log('Done fetching Apex Legends gameplay/blog images.');
+console.log('Done fetching Rust gameplay/blog images.');

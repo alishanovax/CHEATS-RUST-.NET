@@ -59,50 +59,50 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['apex-esp-setup', 'apex-lite-vs-pro', 'apex-radar', 'eac-patch-day'],
+  lite: ['rust-esp-setup', 'rust-lite-vs-pro', 'rust-radar', 'eac-patch-day'],
   pro: [
-    'apex-aimbot-ranked',
-    'apex-aimbot-combat',
-    'apex-lite-vs-pro',
-    'apex-stream-proof',
+    'rust-aimbot-ranked',
+    'rust-aimbot-combat',
+    'rust-lite-vs-pro',
+    'rust-stream-proof',
   ],
   elite: [
-    'apex-elite-tier',
-    'apex-cheat-features',
-    'apex-esp-setup',
+    'rust-elite-tier',
+    'rust-cheat-features',
+    'rust-esp-setup',
     'eac-patch-day',
-    'buy-apex-legends-cheats',
+    'buy-rust-legends-cheats',
   ],
   'hwid-spoofer': [
-    'apex-hwid-ban',
+    'rust-hwid-ban',
     'eac-troubleshooting',
     'eac-patch-day',
-    'apex-external-loader',
+    'rust-external-loader',
   ],
   ugc: [
     'eac-troubleshooting',
-    'apex-hwid-ban',
-    'buy-apex-legends-cheats',
+    'rust-hwid-ban',
+    'buy-rust-legends-cheats',
   ],
   'unlock-all': [
-    'apex-loadouts',
-    'apex-cheat-features',
-    'apex-stream-proof',
+    'rust-loadouts',
+    'rust-cheat-features',
+    'rust-stream-proof',
   ],
 };
 
-const productBase = '/products/apex/';
+const productBase = '/products/rust/';
 
 const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live banner on apexlegendcheats.net and Discord #status before purchase—especially after a Apex Legends or Easy Anti-Cheat update.',
+    desc: 'Check the live banner on cheatsrust.net and Discord #status before purchase—especially after a Rust or Easy Anti-Cheat update.',
   },
   {
     num: '02',
     title: 'Choose your access tier',
-    desc: 'Select Elite Apex Legends cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
+    desc: 'Select Elite Rust cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
   },
   {
     num: '03',
@@ -124,17 +124,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Apex Legends and Easy Anti-Cheat receive frequent updates. Confirm module availability on the live status panel at apexlegendcheats.net before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
+  'Rust and Easy Anti-Cheat receive frequent updates. Confirm module availability on the live status panel at cheatsrust.net before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
 
 const sharedLimitations =
-  'Third-party software in Apex Legends can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
+  'Third-party software in Rust can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
 
-const apexSystemRequirements: SystemRequirement[] = [
-  { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit) with HVCI, Core Isolation, TPM and Secure Boot enabled.' },
-  { icon: 'reqEpic', text: 'Current PC build of Apex Legends with the latest patches applied.' },
-  { icon: 'reqSettings', text: 'Cloud DMA access for full functionality on supported builds.' },
+const rustSystemRequirements: SystemRequirement[] = [
+  { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit).' },
+  { icon: 'reqEpic', text: 'Steam-installed Rust client updated to the latest public build.' },
+  { icon: 'reqSettings', text: 'Administrator rights for loader setup where required by the portal guide.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and loader updates.' },
-  { icon: 'reqCpu', text: 'Intel or AMD system that meets Apex Legends hardware requirements.' },
+  { icon: 'reqCpu', text: 'Intel or AMD system that meets Rust hardware requirements.' },
 ];
 
 type GalleryKey = keyof typeof galleryRaw;
@@ -144,30 +144,30 @@ const galleryRaw = {
     src: SITE_CHEAT_IMAGES[0].src,
     alt: SITE_CHEAT_IMAGES[0].alt,
     caption: 'Soft aim & ESP',
-    captionDesc: 'Apex Legends trainer overlays tuned for PC gunfights.',
+    captionDesc: 'Rust trainer overlays tuned for PC gunfights.',
   },
   gpEspWallhack: {
     src: SITE_CHEAT_IMAGES[1].src,
     alt: SITE_CHEAT_IMAGES[1].alt,
     caption: 'Enemy ESP',
-    captionDesc: 'Player ESP with health, health and distance in Apex Legends multiplayer.',
+    captionDesc: 'Player ESP with health, health and distance in Rust multiplayer.',
   },
   gpGameplay: {
     src: SITE_CHEAT_IMAGES[2].src,
     alt: SITE_CHEAT_IMAGES[2].alt,
-    caption: 'Apex Legends co-op',
+    caption: 'Rust co-op',
     captionDesc: 'Tactical shooter action on PC with trainer-friendly overlays.',
   },
   gpEspIndoor: {
     src: SITE_CHEAT_IMAGES[3].src,
     alt: SITE_CHEAT_IMAGES[3].alt,
-    caption: 'Apex combat',
-    captionDesc: 'Cel-shaded Apex Legends combat in a twilight outpost.',
+    caption: 'Rust combat',
+    captionDesc: 'Cel-shaded Rust combat in a twilight outpost.',
   },
   gpCourtyard: {
     src: SITE_CHEAT_IMAGES[4]!.src,
     alt: SITE_CHEAT_IMAGES[4]!.alt,
-    caption: 'Apex firefight',
+    caption: 'Rust firefight',
     captionDesc: 'Sci-fi courtyard firefight with Legend action.',
   },
 };
@@ -185,7 +185,7 @@ function slide(...keys: GalleryKey[]): ProductSlide[] {
 }
 
 const productDetailGalleryCaptions = [
-  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Apex Legends patch and security news.' },
+  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Rust patch and security news.' },
   { caption: 'Multiplayer gameplay', captionDesc: 'In-match view on a compact map with full HUD.' },
   { caption: 'Quick Match perspective', captionDesc: 'First-person combat with kill feed and minimap.' },
 ] as const;
@@ -204,14 +204,14 @@ function productDetailGallery(): ProductSlide[] {
 
 function slugFromHref(href: string): string {
   const segment = href.replace(productBase, '').replace(/^\//, '').replace(/\/$/, '');
-  return segment || 'apex';
+  return segment || 'rust';
 }
 
 const tierAbout: Record<string, ProductPage['about']> = {
   lite: [
     {
       type: 'p',
-      text: 'Apex Lite is built for players who want map awareness first. In ranked, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
+      text: 'Rust Lite is built for players who want map awareness first. In ranked, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
     },
     { type: 'h2', text: 'Ranked-safe by design' },
     {
@@ -222,7 +222,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   pro: [
     {
       type: 'p',
-      text: 'Apex Pro is the sweet spot for ranked grinders. Aimbot, Smooth Aim and Sticky Aim help you win squad fights without obvious bot patterns—when you tune Smoothness sliders using our portal presets.',
+      text: 'Rust Pro is the sweet spot for ranked grinders. Aimbot, Smooth Aim and Sticky Aim help you win squad fights without obvious bot patterns—when you tune Smoothness sliders using our portal presets.',
     },
     { type: 'h2', text: 'Aimbot + awareness combined' },
     {
@@ -233,7 +233,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   elite: [
     {
       type: 'p',
-      text: 'Apex Elite is the private build for players who want everything—Loot Assist, Triggerbot, Recoil control, Legend loadout tools, full wall ESP and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
+      text: 'Rust Elite is the private build for players who want everything—Loot Assist, Triggerbot, Recoil control, loadout preview tools, full wall ESP and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
     },
     { type: 'h2', text: 'Use Elite responsibly' },
     {
@@ -248,7 +248,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included modules' },
     {
       type: 'p',
-      text: 'Player ESP with distance and name tags, chest and reboot-van locator, loot spawn timers, radar cheat, and stream-safe overlay hiding. Config presets for Battle Royale and Ranked ship in the portal—load before your first queue.',
+      text: 'Player ESP with distance and name tags, chest and reboot-van locator, loot spawn timers, radar cheat, and stream-safe overlay hiding. Config presets for vanilla and modded servers ship in the portal—load before your first queue.',
     },
     { type: 'h2', text: 'Upgrade path' },
     {
@@ -265,14 +265,14 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at apexlegendcheats.net—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first ranked session.',
+      text: 'Pro is the most popular tier at cheatsrust.net—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first ranked session.',
     },
   ],
   elite: [
     { type: 'h2', text: 'Full bot and finish suite' },
     {
       type: 'p',
-      text: 'Loot Assist, Rotation Assist AI, Triggerbot, Recoil control, Legend loadout tools and full wall ESP with smoke alerts. Use lobby testing before ranked—Elite power requires disciplined profiles, not rage settings.',
+      text: 'Loot Assist, Rotation Assist AI, Triggerbot, Recoil control, loadout preview tools and full wall ESP with smoke alerts. Use lobby testing before ranked—Elite power requires disciplined profiles, not rage settings.',
     },
     { type: 'h2', text: 'Availability' },
     {
@@ -287,7 +287,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'When you need it' },
     {
       type: 'p',
-      text: 'Use when fresh EA accounts fail instantly on one PC but work elsewhere—classic HWID enforcement. Do not use for account-only Easy Anti-Cheat cases; see [UGC](/products/apex/ugc/) instead.',
+      text: 'Use when fresh EA accounts fail instantly on one PC but work elsewhere—classic HWID enforcement. Do not use for account-only Easy Anti-Cheat cases; see [UGC](/products/rust/ugc/) instead.',
     },
     { type: 'h2', text: 'Full workflow' },
     {
@@ -304,7 +304,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Realistic expectations' },
     {
       type: 'p',
-      text: 'Some Easy Anti-Cheat bans cannot be reversed. UGC organizes evidence and follow-ups for EA review. Pair with [HWID Spoofer](/products/apex/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
+      text: 'Some Easy Anti-Cheat bans cannot be reversed. UGC organizes evidence and follow-ups for EA review. Pair with [HWID Spoofer](/products/rust/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
     },
   ],
   'unlock-all': [
@@ -316,7 +316,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included with Elite' },
     {
       type: 'p',
-      text: 'Legend loadout tools ships inside the Elite tier. Buy standalone here if you want cosmetic preview without full combat modules.',
+      text: 'loadout preview tools ships inside the Elite tier. Buy standalone here if you want cosmetic preview without full combat modules.',
     },
   ],
 };
@@ -329,7 +329,7 @@ const productContent: Record<
     images: productDetailGallery(),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: apexSystemRequirements,
+    systemRequirements: rustSystemRequirements,
     fullFeatures: [
       'Player ESP & player boxes',
       'Chest & loot locator',
@@ -347,10 +347,10 @@ const productContent: Record<
       'Patch auto-updater',
     ],
     overview: {
-      title: 'Apex Lite: ESP and radar',
+      title: 'Rust Lite: ESP and radar',
       paragraphs: [
         'Lite is for player ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
-        'Best if you want awareness in Battle Royale and Ranked without combat automation. Overlays are updated after Apex Legends patches.',
+        'Best if you want awareness in vanilla and modded servers without combat automation. Overlays are updated after Rust patches.',
       ],
     },
   },
@@ -358,7 +358,7 @@ const productContent: Record<
     images: productDetailGallery(),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: apexSystemRequirements,
+    systemRequirements: rustSystemRequirements,
     fullFeatures: [
       'All Lite ESP & wall ESP modules',
       'Aimbot',
@@ -377,10 +377,10 @@ const productContent: Record<
       'Discord operator support',
     ],
     overview: {
-      title: 'Apex Pro: aimbot plus ESP',
+      title: 'Rust Pro: aimbot plus ESP',
       paragraphs: [
         'Pro includes everything in Lite, plus Aimbot, Smooth Aim, Sticky Aim and hotkey macros. Aim settings live in one tab. Start with a portal preset, not max sliders.',
-        'Most people pick Pro for Battle Royale and Ranked. Bone priority and macros help in fights while defaults stay smooth.',
+        'Most people pick Pro for vanilla and modded servers. Bone priority and macros help in fights while defaults stay smooth.',
       ],
     },
   },
@@ -388,7 +388,7 @@ const productContent: Record<
     images: productDetailGallery(),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: apexSystemRequirements,
+    systemRequirements: rustSystemRequirements,
     fullFeatures: [
       'All Lite + Pro modules',
       'Loot Assist',
@@ -400,7 +400,7 @@ const productContent: Record<
       'Full wall ESP suite',
       'Third-party alert system',
       'Visibility detector',
-      'Legend loadout tools (Loadout Pack)',
+      'loadout preview tools (Loadout Pack)',
       'Priority patch queue',
       'Direct dev Discord support',
       'Elite conservative presets',
@@ -411,21 +411,21 @@ const productContent: Record<
     overview: {
       title: 'Elite: full cheat + extras',
       paragraphs: [
-        'Elite includes Lite and Pro modules, plus loot assist, Triggerbot, Recoil control, Legend loadout tools, full wall ESP and faster patch priority.',
-        'Elite slots are limited. Discord support helps you set safer profiles before ranked matchmaking. Check the status banner on apexlegendcheats.net before you buy Elite access.',
+        'Elite includes Lite and Pro modules, plus loot assist, Triggerbot, Recoil control, loadout preview tools, full wall ESP and faster patch priority.',
+        'Elite slots are limited. Discord support helps you set safer profiles before ranked matchmaking. Check the status banner on cheatsrust.net before you buy Elite access.',
       ],
     },
   },
   'hwid-spoofer': {
     images: slide('gpEspIndoor', 'gpEspWallhack', 'gpGameplay'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Apex Legends.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Rust.',
     limitations:
       'Spoofing does not help account-only Easy Anti-Cheat cases. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Apex Legends after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Rust after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -441,7 +441,7 @@ const productContent: Record<
       'Discord recovery support',
     ],
     overview: {
-      title: 'HWID Spoofer for Apex Legends PC bans',
+      title: 'HWID Spoofer for Rust PC bans',
       paragraphs: [
         'Use the HWID Spoofer when Easy Anti-Cheat flags your PC hardware but the EA account is still fine. Includes disk and MAC tools, a restore-point checklist, a compatibility scan and post-spoof checks.',
         'Use it when new accounts die on one PC but work on another. It does not fix account-only Easy Anti-Cheat bans. After spoofing, use a safer cheat profile before ranked matchmaking.',
@@ -457,7 +457,7 @@ const productContent: Record<
     limitations:
       'UGC does not guarantee account restoration. Results vary by case type. Permanent Easy Anti-Cheat bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on apexlegendcheats.net or at checkout on apexlegendcheats.net.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on cheatsrust.net or at checkout on cheatsrust.net.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for Discord support and case dashboard.' },
     ],
@@ -486,7 +486,7 @@ const productContent: Record<
       'Loadout Pack previews cosmetics locally on your client. Other players in your lobby see your real inventory—not preview skins. Included with Elite tier.',
     limitations:
       'Local preview only—does not modify in-game inventory or store state. Other players cannot see previewed skins or sets.',
-    systemRequirements: apexSystemRequirements,
+    systemRequirements: rustSystemRequirements,
     fullFeatures: [
       'Outfit skin swap',
       'Skin & wrap preview',
@@ -498,10 +498,10 @@ const productContent: Record<
       'Loadout export',
     ],
     overview: {
-      title: 'Legend loadout tools / Loadout Pack',
+      title: 'loadout preview tools / Loadout Pack',
       paragraphs: [
-        'Legend loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Apex Legends client. Legend loadout tools does not change your in-game inventory or store purchases.',
-        'Only you see the preview skins. Other players see your real inventory. Included with Elite, or buy Legend loadout tools alone without combat modules.',
+        'loadout preview tools / Loadout Pack lets you preview outfits, camos and attachments on your Rust client. loadout preview tools does not change your in-game inventory or store purchases.',
+        'Only you see the preview skins. Other players see your real inventory. Included with Elite, or buy loadout preview tools alone without combat modules.',
       ],
     },
   },
@@ -511,7 +511,7 @@ function buildTierPages(): ProductPage[] {
   return t.cheats.items.map((cheat) => {
     const slug = slugFromHref(cheat.href);
     const content = productContent[slug];
-    const displayName = cheat.name === 'Lite' ? 'Apex Lite' : cheat.name === 'Pro' ? 'Apex Pro' : 'Apex Elite';
+    const displayName = cheat.name === 'Lite' ? 'Rust Lite' : cheat.name === 'Pro' ? 'Rust Pro' : 'Rust Elite';
     return {
       slug,
       kind: 'tier',
@@ -598,6 +598,6 @@ export const productHub = {
   path: productBase,
   title: t.products.title,
   subtitle: t.products.subtitle,
-  description: 'Apex Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and Legend loadout tools for PC.',
-  buyUrl: checkoutPath('apex'),
+  description: 'Rust Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and loadout preview tools for PC.',
+  buyUrl: checkoutPath('rust'),
 };

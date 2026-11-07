@@ -1,15 +1,15 @@
 /**
  * Copy into Zadeyo /products/rainbow-six-siege-cheats (Next.js product route).
- * apexlegendcheats.net mirrors this on /go/apex/ after deploy; zadeyo.com must be updated separately.
+ * cheatsrust.net mirrors this on /go/rust/ after deploy; zadeyo.com must be updated separately.
  */
-import { ZADEYO_APEX_PRODUCT_SEO, ZADEYO_APEX_CHECKOUT_URL } from '../src/config/zadeyoApexProductSeo.ts';
+import { ZADEYO_RUST_PRODUCT_SEO, ZADEYO_RUST_CHECKOUT_URL } from '../src/config/zadeyoRustProductSeo.ts';
 
 export const ZADEYO_RAINBOW_SIX_SIEGE_CHEATS_PRODUCT_SEO = {
-  ...ZADEYO_APEX_PRODUCT_SEO,
-  checkoutUrl: ZADEYO_APEX_CHECKOUT_URL,
+  ...ZADEYO_RUST_PRODUCT_SEO,
+  checkoutUrl: ZADEYO_RUST_CHECKOUT_URL,
   /** Zadeyo CMS: use one <h1>; demote duplicate product hero headings to <h2>. */
   headingOutline: [
-    { level: 'h1', text: ZADEYO_APEX_PRODUCT_SEO.h1 },
+    { level: 'h1', text: ZADEYO_RUST_PRODUCT_SEO.h1 },
     { level: 'h2', text: 'Product details' },
     { level: 'h2', text: 'Gameplay screenshots' },
     { level: 'h2', text: 'Features' },

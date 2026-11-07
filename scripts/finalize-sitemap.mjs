@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { resolveDistDir } from './dist-dir.mjs';
 
-const SITE = 'https://apexlegendcheats.net';
+const SITE = 'https://cheatsrust.net';
 const dist = resolveDistDir();
 const publicDir = path.join(path.dirname(dist), 'public');
 
@@ -68,7 +68,7 @@ function normalizeUrl(loc) {
     return null;
   }
   if (url.protocol !== 'https:') url.protocol = 'https:';
-  url.hostname = 'apexlegendcheats.net';
+  url.hostname = 'cheatsrust.net';
   url.hash = '';
   url.search = '';
   let pathname = url.pathname;

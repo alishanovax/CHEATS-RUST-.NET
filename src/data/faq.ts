@@ -35,12 +35,12 @@ function expandFaqAnswer(answer: string, faqId: string): string {
     ELITE: link(`Elite tier checkout (${faqId})`, productPath('elite')),
     LITE: link(`Lite ESP tier (${faqId})`, productPath('lite')),
     PRO: link(`Pro aimbot tier (${faqId})`, productPath('pro')),
-    PRODUCTS_HUB: link(`Full Apex catalog (${faqId})`, ROUTES.products),
+    PRODUCTS_HUB: link(`Full Rust catalog (${faqId})`, ROUTES.products),
     HWID: link(`HWID spoofer utility — ${faqId}`, productPath('hwid-spoofer')),
     UGC: link(`UGC appeal tools — ${faqId}`, productPath('ugc')),
-    SKIN: link(`Legend loadout tools pack — ${faqId}`, productPath('unlock-all')),
+    SKIN: link(`loadout preview tools pack — ${faqId}`, productPath('unlock-all')),
     FAQ_PAGE: link(`Full FAQ index — ${faqId}`, ROUTES.faq),
-    BLOG: link(`Apex blog guides — ${faqId}`, ROUTES.blog),
+    BLOG: link(`Rust blog guides — ${faqId}`, ROUTES.blog),
   };
   return Object.entries(slots).reduce(
     (text, [key, html]) => text.replaceAll(`{{${key}}}`, html),
@@ -57,28 +57,28 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if Apex Legends cheats are online?',
-    a: a('The live status banner is on apexlegendcheats.net and in the Discord #status channel. Always check after a Apex Legends or Easy Anti-Cheat update.'),
+    q: 'Where do I check if Rust cheats are online?',
+    a: a('The live status banner is on cheatsrust.net and in the Discord #status channel. Always check after a Rust or Easy Anti-Cheat update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Apex Legends.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Rust.'),
   },
   {
     id: 'pricing',
     topic: 'plans',
     icon: 'faqComparePlans',
-    q: 'How much do Apex Legends cheats cost?',
-    a: a('Checkout plans are Monthly for $35 (31 days of access) and Lifetime for $150 (unlimited access). Both include the same Apex Legends trainer modules at Zadeyo checkout.'),
+    q: 'How much do Rust cheats cost?',
+    a: a('Checkout plans are Monthly for $35 (31 days of access) and Lifetime for $150 (unlimited access). Both include the same Rust trainer modules at Zadeyo checkout.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using third-party Apex Legends cheats?',
+    q: 'Can I get banned using third-party Rust cheats?',
     a: a('Yes—any modification carries risk. Easy Anti-Cheat and report systems evolve. Read current status and accept the risk before use.'),
   },
   {
@@ -86,7 +86,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Apex Legends via EA Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
+    a: a('Rust via Steam on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -106,7 +106,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Apex Legends wall ESP / ESP?',
+    q: 'What is Rust wall ESP / ESP?',
     a: `wall ESP and player ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
     scopes: ['lite', 'pro', 'elite'],
   },
@@ -122,7 +122,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhichTierEsp',
     q: 'Which tier do I need for wall ESP only?',
-    a: `{{LITE}} is awareness only: player ESP, chest locator, loot timers and radar cheat. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and Legend loadout tools.`,
+    a: `{{LITE}} is awareness only: player ESP, chest locator, loot timers and radar cheat. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout preview tools.`,
     scopes: ['lite'],
   },
   {
@@ -159,7 +159,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected Apex Legends cheats guaranteed?',
+    q: 'Are undetected Rust cheats guaranteed?',
     a: a('No. Undetected is current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing, or detected.'),
   },
   {
@@ -189,7 +189,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'skin-changer',
     topic: 'products',
     icon: 'faqSkinChanger',
-    q: 'Does Legend loadout tools modify my in-game inventory?',
+    q: 'Does loadout preview tools modify my in-game inventory?',
     a: `{{SKIN}} previews cosmetics locally on your client. Other players see your real inventory. Included with {{ELITE}}; available standalone for cosmetic preview only.`,
     scopes: ['unlock-all'],
   },
@@ -198,14 +198,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the game folder?',
-    a: `Apex Legends Cheats runs external with cloud config sync—no files injected into the Apex Legends directory. Easy Anti-Cheat risk still applies. See {{PRODUCTS_HUB}}.`,
+    a: `Rust Cheats runs external with cloud config sync—no files injected into the Rust directory. Easy Anti-Cheat risk still applies. See {{PRODUCTS_HUB}}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
     q: 'Are blog cheat codes the same as ranked cheats?',
-    a: `No. Blog articles about Steam console commands apply only in custom lobbies with cheats enabled. Ranked Apex Legends cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
+    a: `No. Blog articles about Steam console commands apply only in custom lobbies with cheats enabled. Ranked Rust cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
   },
   {
     id: 'blog-setup',
@@ -234,7 +234,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `Ranked players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at apexlegendcheats.net.`,
+    a: `Ranked players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at cheatsrust.net.`,
     scopes: ['pro'],
   },
   {
@@ -242,7 +242,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoElite',
     q: 'Who should buy Elite?',
-    a: `Operators who want Loot Assist, Triggerbot, Legend loadout tools and priority patch delivery when slots are open.`,
+    a: `Operators who want Loot Assist, Triggerbot, loadout preview tools and priority patch delivery when slots are open.`,
     scopes: ['elite'],
   },
   {
@@ -250,14 +250,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqEacUpdate',
     q: 'What should I do after a Easy Anti-Cheat update?',
-    a: a('Check apexlegendcheats.net status and Discord #status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
+    a: a('Check cheatsrust.net status and Discord #status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
   },
   {
     id: 'discord-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('Open Discord after purchase with your order email, Windows version and Apex Legends client build. Staff walk through loader setup live.'),
+    a: a('Open Discord after purchase with your order email, Windows version and Rust client build. Staff walk through loader setup live.'),
   },
   {
     id: 'zero-build-ranked',
@@ -286,8 +286,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private Apex Legends cheats?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. Apex Legends Cheats ships portal delivery for ESP, aimbot and wall ESP tiers.'),
+    q: 'What are private Rust cheats?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. Rust Cheats ships portal delivery for ESP, aimbot and wall ESP tiers.'),
   },
   {
     id: 'faq-more',
@@ -313,7 +313,7 @@ export function getAllFaqs(): SiteFaqItem[] {
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'All topics',
-  title: 'Apex Legends cheats FAQ',
+  title: 'Rust cheats FAQ',
   subtitle: 'Filter by cheat plans, wall ESP, aimbot, products, setup and guides.',
 } as const;
 
@@ -330,7 +330,7 @@ export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
 /** Section copy when FAQ list is scoped to the current page (not /faq/). */
 export const CONTEXTUAL_FAQ_SECTION_COPY = {
   eyebrow: 'Cheat FAQ',
-  title: 'Apex Legends cheats questions',
+  title: 'Rust cheats questions',
   subtitle: 'Straight answers on aimbot, ESP, bans and setup — see the full FAQ for every topic.',
 } as const;
 
@@ -374,7 +374,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStart',
       q: 'Should I use console cheat codes in ranked?',
-      a: a('No. Firing Range lobby cheat codes only work in custom games with cheats enabled. Ranked requires separate Apex Legends cheats from apexlegendcheats.net tiers.'),
+      a: a('No. combat test server lobby cheat codes only work in custom games with cheats enabled. Ranked requires separate Rust cheats from cheatsrust.net tiers.'),
     },
     {
       id: 'blog-guide-tier',
@@ -438,7 +438,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this article work next patch?',
-    a: a('Re-check status after every Apex Legends update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Rust update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -494,7 +494,7 @@ export const compareRows = [
   { feature: 'Triggerbot', icon: 'compareAutoKillSteal' as const, lite: false, pro: false, elite: true },
   { feature: 'Recoil control', icon: 'compareAutoShieldBreak' as const, lite: false, pro: false, elite: true },
   { feature: 'Full wall ESP suite', icon: 'compareFullMapHack' as const, lite: false, pro: false, elite: true },
-  { feature: 'Legend loadout tools (Loadout Pack)', icon: 'compareSkinChanger' as const, lite: false, pro: false, elite: true },
+  { feature: 'loadout preview tools (Loadout Pack)', icon: 'compareSkinChanger' as const, lite: false, pro: false, elite: true },
   { feature: 'Priority patch queue', icon: 'comparePriorityPatch' as const, lite: false, pro: false, elite: true },
   { feature: 'Direct dev Discord support', icon: 'compareDevSupport' as const, lite: false, pro: false, elite: true },
   { feature: 'Cloud config backup', icon: 'compareCloudBackup' as const, lite: true, pro: true, elite: true },

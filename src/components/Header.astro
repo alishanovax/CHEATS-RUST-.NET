@@ -16,7 +16,7 @@ const navIcons: Record<string, IconName> = {
   Support: 'navSupport',
 };
 
-const purchaseUrl = checkoutPath('apex');
+const purchaseUrl = checkoutPath('rust');
 ---
 
 <header class="pointer-events-none fixed inset-x-0 top-0 z-50">
@@ -24,7 +24,7 @@ const purchaseUrl = checkoutPath('apex');
     <div
       class="pointer-events-auto relative flex h-14 w-full max-w-6xl items-center justify-between gap-3 rounded-2xl border border-border/40 bg-background/35 px-4 text-foreground shadow-md shadow-black/5 backdrop-blur-2xl supports-[backdrop-filter]:bg-background/25 dark:border-white/10 dark:bg-background/20 dark:shadow-black/25 sm:px-5 lg:h-[3.75rem]"
     >
-      <SiteBrandMark compact class="shrink-0 self-center" />
+      <SiteBrandMark compact showIcon class="shrink-0 self-center" />
 
       <nav
         id="primary-navigation"

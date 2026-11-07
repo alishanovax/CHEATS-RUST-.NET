@@ -10,12 +10,12 @@ const SKIP = new Set(['node_modules', '.git', 'dist']);
 const EXTS = new Set(['.ts', '.astro', '.mjs', '.js', '.json', '.md', '.txt', '.webmanifest', '.css', '.toml']);
 
 const SLUG_REPLACEMENTS = [
-  ['buy-apex-legends-cheats', 'buy-apex-legends-cheats'],
-  ['r6-cheat-setup', 'apex-cheat-setup'],
-  ['/apex-legends-cheats/', '/apex-legends-cheats/'],
-  ['/apex-legends-cheats', '/apex-legends-cheats'],
-  ['r6CheatsLanding', 'apexLegendsCheatsLanding'],
-  ['%2Fapex-legends-cheats', '%2Fr6-hacks'],
+  ['buy-rust-legends-cheats', 'buy-rust-legends-cheats'],
+  ['r6-cheat-setup', 'rust-cheat-setup'],
+  ['/rust-cheats/', '/rust-cheats/'],
+  ['/rust-cheats', '/rust-cheats'],
+  ['r6CheatsLanding', 'rustCheatsLanding'],
+  ['%2Frust-legends-cheats', '%2Fr6-hacks'],
 ];
 
 const PROTECT = [];
@@ -44,13 +44,13 @@ function protectUrls(text) {
 
 function applyVocab(text) {
   let next = protectUrls(text);
-  next = next.replace(/\bApex Legends cheats\b/gi, 'Apex Legends hacks');
+  next = next.replace(/\bRust cheats\b/gi, 'Rust hacks');
   next = next.replace(/\brainbow six siege cheats\b/gi, 'rainbow six siege hacks');
-  next = next.replace(/\bR6 Cheats\b/g, 'Apex Legends Cheats');
-  next = next.replace(/\bR6 cheats\b/g, 'Apex Legends cheats');
-  next = next.replace(/\br6 cheats\b/g, 'Apex Legends cheats');
-  next = next.replace(/\bbuy r6 cheats\b/gi, 'buy Apex Legends cheats');
-  next = next.replace(/\bBuy R6 cheats\b/g, 'Buy Apex Legends cheats');
+  next = next.replace(/\bR6 Cheats\b/g, 'Rust Cheats');
+  next = next.replace(/\bR6 cheats\b/g, 'Rust cheats');
+  next = next.replace(/\br6 cheats\b/g, 'Rust cheats');
+  next = next.replace(/\bbuy r6 cheats\b/gi, 'buy Rust cheats');
+  next = next.replace(/\bBuy R6 cheats\b/g, 'Buy Rust cheats');
   next = next.replace(/\bCheats\b/g, 'Hacks');
   next = next.replace(/\bcheats\b/g, 'hacks');
   next = next.replace(/\bCheat\b/g, 'Hack');
@@ -72,11 +72,11 @@ function applySlugs(text) {
 
 function renameLanding() {
   const from = path.join(root, 'src', 'data', 'r6CheatsLanding.ts');
-  const to = path.join(root, 'src', 'data', 'apexLegendsCheatsLanding.ts');
+  const to = path.join(root, 'src', 'data', 'rustCheatsLanding.ts');
   if (fs.existsSync(from)) {
     fs.writeFileSync(to, applyVocab(applySlugs(fs.readFileSync(from, 'utf8'))));
     fs.unlinkSync(from);
-    console.log('renamed r6CheatsLanding.ts → apexLegendsCheatsLanding.ts');
+    console.log('renamed r6CheatsLanding.ts → rustCheatsLanding.ts');
   }
 }
 
@@ -102,17 +102,17 @@ for (const file of walk(root)) {
   }
 }
 
-const fromPage = path.join(root, 'src', 'pages', 'apex-legends-cheats');
+const fromPage = path.join(root, 'src', 'pages', 'rust-legends-cheats');
 const toPage = path.join(root, 'src', 'pages', 'r6-hacks');
 if (fs.existsSync(fromPage) && !fs.existsSync(toPage)) {
   fs.renameSync(fromPage, toPage);
-  console.log('renamed pages/apex-legends-cheats → r6-hacks');
+  console.log('renamed pages/rust-cheats → r6-hacks');
 } else if (fs.existsSync(fromPage) && fs.existsSync(toPage)) {
   for (const name of fs.readdirSync(fromPage)) {
     fs.copyFileSync(path.join(fromPage, name), path.join(toPage, name));
   }
   fs.rmSync(fromPage, { recursive: true });
-  console.log('merged pages/apex-legends-cheats → r6-hacks');
+  console.log('merged pages/rust-cheats → r6-hacks');
 }
 
 console.log(`Done. Updated ${n} files.`);

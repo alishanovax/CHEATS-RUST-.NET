@@ -36,8 +36,8 @@ const REPLACEMENTS = [
   ['https://zadeyo.com/products/dota-2', 'https://zadeyo.com/products/fortnite'],
   ['%2Fproducts%2Fdota-2', '%2Fproducts%2Ffortnite'],
   ['/products/dota-2', '/products/fortnite'],
-  ['/go/dota-2/', '/go/apex/'],
-  ['/go/dota-2', '/go/apex'],
+  ['/go/dota-2/', '/go/rust/'],
+  ['/go/dota-2', '/go/rust'],
 
   ["checkoutPath('dota2')", "checkoutPath('fortnite')"],
   ['checkoutPath("dota2")', 'checkoutPath("fortnite")'],
@@ -104,7 +104,7 @@ const REPLACEMENTS = [
   ["'VAC'", "'EAC'"],
 
   ['Captains Mode', 'Ranked Arena'],
-  ['All Pick', 'Battle Royale'],
+  ['All Pick', 'vanilla servers'],
 ];
 
 const IMAGE_RENAMES = [

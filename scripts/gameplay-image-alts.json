@@ -2,22 +2,22 @@
   "gameplay": [
     {
       "file": "r6-hack-aimbot-esp.png",
-      "alt": "Apex Legends aimbot and ESP with FOV circle, red target box and snap line through cover",
+      "alt": "Rust aimbot and ESP with FOV circle, red target box and snap line through cover",
       "srcIndex": 0
     },
     {
       "file": "r6-hack-esp-wallhack.png",
-      "alt": "Apex Legends ESP wallhack with green player boxes in a tactical indoor firefight",
+      "alt": "Rust ESP wallhack with green player boxes in a tactical indoor firefight",
       "srcIndex": 1
     },
     {
       "file": "r6-hack-gameplay.jpg",
-      "alt": "Apex Legends Battle Royale gameplay on PC with body-camera perspective in a gritty urban map",
+      "alt": "Rust vanilla servers gameplay on PC with body-camera perspective in a gritty urban map",
       "srcIndex": 2
     },
     {
       "file": "r6-hack-esp-indoor.png",
-      "alt": "Apex Legends ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
+      "alt": "Rust ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
       "srcIndex": 3
     }
   ],

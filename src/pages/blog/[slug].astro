@@ -38,9 +38,9 @@ if (!post) {
 
 const postPath = `/blog/${post.slug}/`;
 const blogCrumbLabels: Record<string, string> = {
-  'apex-firing-range-practice': 'Apex Firing Range guides (blog hub)',
-  'apex-stream-proof': 'Stream-proof guides (blog hub)',
-  'apex-radar': 'Radar cheat guides (blog hub)',
+  'rust-firing-range-practice': 'Rust combat test server guides (blog hub)',
+  'rust-stream-proof': 'Stream-proof guides (blog hub)',
+  'rust-radar': 'Radar cheat guides (blog hub)',
 };
 const blogCrumbLabel = blogCrumbLabels[post.slug] ?? 'Blog';
 const breadcrumbs = [
@@ -57,10 +57,10 @@ function linkify(text: string): string {
       const normalized = normalizeInternalPath(href);
       return `<a href="${normalized}">${label}</a>`;
     })
-    .replace(/(https:\/\/apexlegendcheats\.net[^\s.,;)]*)/g, (_match, url: string) => {
-      const path = url.replace(/^https:\/\/apexlegendcheats\.net/, '');
+    .replace(/(https:\/\/cheatsrust\.net[^\s.,;)]*)/g, (_match, url: string) => {
+      const path = url.replace(/^https:\/\/cheatsrust\.net/, '');
       const normalized = normalizeInternalPath(path);
-      const href = normalized.startsWith('http') ? normalized : `https://apexlegendcheats.net${normalized}`;
+      const href = normalized.startsWith('http') ? normalized : `https://cheatsrust.net${normalized}`;
       return `<a href="${href}">${url}</a>`;
     });
 }
@@ -125,9 +125,9 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
               alt={
                 post.slug === 'eac-troubleshooting'
                   ? `${post.title} — Easy Anti-Cheat verification troubleshooting on PC`
-                  : post.slug === 'apex-stream-proof'
+                  : post.slug === 'rust-stream-proof'
                     ? `${post.title} — hide wall ESP and script overlays on stream`
-                    : `${post.title} — Apex Legends cheat gameplay screenshot`
+                    : `${post.title} — Rust cheat gameplay screenshot`
               }
               width={960}
               height={540}
@@ -188,9 +188,9 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                     html={linkify(block.text)}
                     href={resolveCheckoutHref(block.href)}
                     buyLabel={
-                      post.slug === 'apex-firing-range-practice'
-                        ? 'Checkout after Firing Range drills (CTA)'
-                        : post.slug === 'apex-stream-proof'
+                      post.slug === 'rust-firing-range-practice'
+                        ? 'Checkout after combat test server drills (CTA)'
+                        : post.slug === 'rust-stream-proof'
                           ? 'Buy stream-proof tier (inline CTA)'
                           : undefined
                     }
@@ -202,30 +202,30 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
           </Prose>
 
           <nav class="blog-article__actions" aria-label="Continue reading">
-            <Button as="a" href={checkoutPath('apex')} variant="primary" aria-label={t.ui.checkoutAria}>
+            <Button as="a" href={checkoutPath('rust')} variant="primary" aria-label={t.ui.checkoutAria}>
               {
                 post.slug === 'eac-troubleshooting'
                   ? 'Checkout after Easy Anti-Cheat fix'
-                  : post.slug === 'apex-stream-proof'
-                    ? 'Buy stream-proof Apex tier'
-                    : post.slug === 'apex-firing-range-practice'
-                      ? 'Checkout after Firing Range drills'
-                      : post.slug === 'apex-radar'
+                  : post.slug === 'rust-stream-proof'
+                    ? 'Buy stream-proof Rust tier'
+                    : post.slug === 'rust-firing-range-practice'
+                      ? 'Checkout after combat test server drills'
+                      : post.slug === 'rust-radar'
                         ? 'Buy Lite radar cheat tier'
-                        : 'Buy Apex Legends Cheats'
+                        : 'Buy Rust Cheats'
               }
               <Icon name="arrowRight" size={17} />
             </Button>
             <Button as="a" href={ROUTES.products} variant="outline">
               {
                 post.slug === 'eac-troubleshooting'
-                  ? 'Open Apex product catalog'
-                  : post.slug === 'apex-stream-proof'
+                  ? 'Open Rust product catalog'
+                  : post.slug === 'rust-stream-proof'
                     ? 'Open stream-safe product hub'
-                    : post.slug === 'apex-firing-range-practice'
+                    : post.slug === 'rust-firing-range-practice'
                       ? 'Compare Lite and Pro tiers'
-                      : post.slug === 'apex-radar'
-                        ? 'Open Apex product catalog (radar)'
+                      : post.slug === 'rust-radar'
+                        ? 'Open Rust product catalog (radar)'
                         : 'View products'
               }
             </Button>
@@ -233,11 +233,11 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
               {
                 post.slug === 'eac-troubleshooting'
                   ? 'Browse patch-day guides'
-                  : post.slug === 'apex-stream-proof'
+                  : post.slug === 'rust-stream-proof'
                     ? 'More OBS setup guides'
-                    : post.slug === 'apex-firing-range-practice'
-                      ? 'More Firing Range guides'
-                      : post.slug === 'apex-radar'
+                    : post.slug === 'rust-firing-range-practice'
+                      ? 'More combat test server guides'
+                      : post.slug === 'rust-radar'
                         ? 'More radar and ESP guides'
                         : 'More articles'
               }
